@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogoBest</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Трекер Миссий</title>
+    <link rel="stylesheet" href="style.css"> <!--подключаем css--> 
 </head>
+
 <body>
-    <p  f </p>
+    <div class="app">
+        <header class="header">
+            <h1>Мои миссии</h1>
+            <button id="theme-toggle" class="theme-btn" title="Сменить Тему">🌕</button><!--кнопка смены темы, id=JS, class=CSS, title=всплывающие подсказки-->
+        </header>
+        <section class="controls" >
+            <input type="text" id="task-input" placeholder="Что нужно сделать?" autocomplete="off"> <!--plaseholder=подсказка,autocomplete=отключает подсказки браузера-->
+            <button id="add-btn">Добавить</button>
+        </section> <!--поле ввода, section=смысловой раздел-->
+        <section class="filtres">
+        <input type="text " id="search-input" placeholder="🔎Поиск..."> <!--поле поиска-->
+        <div class="filter-buttons"> <!--кнопки-->
+            <button class="filter-btn active" data-filter="all">Все</button> 
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="done">Выполненные</button>  <!--data-filter=атрибут для понимание какой филтр выбран, пр-р "active"-->
+        </div>
+        </section>
+        <ul id="task-class" class="task-list"></ul> <!--список, js будет наполнять его li-->
+        <footer class="stats">  <!--статистика-->
+            <span id="stat-total">Всего: 0</span>
+            <span id="stat-active">Активных: 0</span>
+            <span id="stat-done">Выполнено: 0</span>
+        </footer>  <!--три счетчика-->
+    </div> <!--закрываем обертку сайта-->
+    <script src="script.js"></script>  <!--подключаем js к html-->
 </body>
 </html>
